@@ -1,7 +1,15 @@
-listA = [3,3,87,5,4,3,7,8,9,455,645,3,345]
-listB = [234,345,66,8,465,456,8,465,2,45,23,52,345]
+listA = []
+listB = []
 
+file = open("D:/Repos/aoc2024/Day1/input.txt", "r")
+content = file.readlines()
+file.close()
 
+while len(content) > 0:
+   tempRow = (content.pop(0))
+   tempList = tempRow.split()
+   listA.append(int(tempList.pop(0)))
+   listB.append(int(tempList.pop(0)))  
 
 listA.sort()
 listB.sort()
